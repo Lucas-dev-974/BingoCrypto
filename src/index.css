@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.page-layout-full {
+  @apply w-[100vw] bg-dark;
+  height: calc(100vh - 60px);
+}
+
+.page-layout {
+  @apply mx-[1px] sm:mx-2 md:mx-14 lg:mx-28;
+}
+
+.hide-on-mobile {
+  @apply hidden sm:flex;
+}

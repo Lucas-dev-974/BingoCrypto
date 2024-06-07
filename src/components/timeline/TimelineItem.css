@@ -1,0 +1,30 @@
+.timeline-item{
+    @apply flex items-center gap-4 relative;
+}
+
+.timeline-date{
+    @apply  absolute left-[-20%] text-xs;
+}
+
+.timeline-line{
+    @apply w-[1px] h-[200%] bg-white absolute left-[50%] top-[-50%] z-0;
+}
+
+.timeline-diamond{
+    @apply w-8 cursor-pointer relative py-5;
+}
+
+.timeline-title {
+    @apply whitespace-nowrap absolute left-[10%];
+}
+
+@-webkit-keyframes blink-animation {
+    0%, 49% {
+      background-color: rgb(117, 209, 63);
+      border: 3px solid #e50000;
+    }
+    50%, 100% {
+      background-color: #e50000;
+      border: 3px solid rgb(117, 209, 63);
+    }
+  }
