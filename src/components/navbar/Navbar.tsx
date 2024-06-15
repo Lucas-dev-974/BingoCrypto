@@ -8,10 +8,18 @@ import "./Navbar.css";
 export function Navbar(): JSXElement {
   return (
     <nav class="navbar">
-      <Text2 text="BingoCrypto" />
+      <Text2 text="Bingo Reunion" />
       <div class="flex gap-3 hide-on-mobile">
-        <Button text="connexion" onClick={() => {}} />
-        <Button text="jeux" onClick={() => changePage(AppPagesEnum.game)} />
+        <Button
+          type="borderless"
+          text="connexion"
+          onClick={() => changePage(AppPagesEnum.auth)}
+        />
+        <Button
+          type="borderless"
+          text="jeux"
+          onClick={() => changePage(AppPagesEnum.game)}
+        />
       </div>
     </nav>
   );
