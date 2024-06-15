@@ -1,3 +1,7 @@
 .button{
-    @apply text-white
+    @apply rounded px-2 py-1 text-sm hover:bg-opacity-90 duration-1000
+}
+
+.btn-primary{
+    @apply bg-blue-700
 }
