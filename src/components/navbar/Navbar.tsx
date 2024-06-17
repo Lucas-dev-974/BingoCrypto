@@ -1,6 +1,6 @@
 import { JSXElement } from "solid-js";
 import { Text2 } from "../texts/Texte2";
-import { Button } from "../buttons/Button";
+import { Button } from "../buttons/default-button/Button";
 import { AppPagesEnum, changePage } from "../../app.state";
 
 import "./Navbar.css";
