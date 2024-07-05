@@ -14,8 +14,10 @@ export function pushNotif(notif: NotificationType) {
 
 export function Notifications() {
   return (
-    <For each={notifications()}>
-      {(notif) => <NotificationItems {...notif} />}
-    </For>
+    <div class="notification-container">
+      <For each={notifications()}>
+        {(notif) => <NotificationItems {...notif} />}
+      </For>
+    </div>
   );
 }
