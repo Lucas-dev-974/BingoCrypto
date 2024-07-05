@@ -16,12 +16,25 @@ import "./assets/css/style.min.css";
 import { Login } from "./views/auth/Login";
 import { Register } from "./views/auth/Register";
 import { Footer } from "./components/footer/Footer";
+import { getAssetsUrl } from "./utils/app.utils";
+
+function BodyShape() {
+  return (
+    <div class="body-shape">
+      <img
+        src={getAssetsUrl() + "assets/images/shape/body-shape.png"}
+        alt="shape"
+      />
+    </div>
+  );
+}
 
 export function App(): JSXElement {
   return (
     <main class="js sizes customelements history pointerevents postmessage postmessage-structuredclones webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers">
       <Navbar />
       <Notifications />
+      <BodyShape />
       <Router>
         <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
