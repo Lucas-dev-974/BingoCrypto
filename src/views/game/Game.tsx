@@ -1,12 +1,16 @@
 import { JSXElement } from "solid-js";
 import { PageLayout } from "../PageLayout";
+import { Pageheader } from "../layout/PageHeader";
+import { Games } from "./Games";
 
 export function GameView(): JSXElement {
   return (
-    <div class="page-layout-full">
-      <PageLayout>
-        <p>Game page</p>
-      </PageLayout>
-    </div>
+    <>
+      <Pageheader
+        breadcrumbTitle="MATCHE"
+        pageHeaderTitle="jeux les plus populaires"
+      />
+      <Games />
+    </>
   );
 }

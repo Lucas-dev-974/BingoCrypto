@@ -16,7 +16,7 @@ export function Banner() {
                 than diverse technologies for magnetic applications eamlessly
                 virtual then Conveniently monetize synergistic human capital
               </p>
-              <a href="login.html" class="default-button">
+              <a href="login" class="default-button">
                 <span>
                   Rejoins-nous dès aujourd'hui !{" "}
                   <i class="icofont-play-alt-1"></i>

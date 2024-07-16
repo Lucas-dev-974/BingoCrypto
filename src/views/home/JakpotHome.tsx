@@ -1,6 +1,6 @@
 import { getAssetsUrl } from "../../utils/app.utils";
 
-export function Jakpot() {
+export function JakpotHome() {
   return (
     <div
       class="jaqport padding-top padding-bottom"
@@ -23,7 +23,7 @@ export function Jakpot() {
                     <h4>top winners list</h4>
                   </div>
                   <div class="jaqport__title-button">
-                    <a href="jaqpot.html" class="default-button">
+                    <a href="jaqpot" class="default-button">
                       <span>
                         View All <i class="icofont-circled-right"></i>
                       </span>

@@ -1,10 +1,7 @@
-import { Match, Switch, type JSXElement } from "solid-js";
-import { AppPagesEnum, onPage } from "./app.state";
+import { type JSXElement } from "solid-js";
 import { Home } from "./views/Home";
 import { Navbar } from "./components/navbar/Navbar";
-import { GameView } from "./views/game/Game";
 import { Notifications } from "./services/Notification";
-import authUtils from "./utils/auth.utils";
 import { Router, Route } from "@solidjs/router";
 
 import "./assets/css/animate.css";
@@ -13,10 +10,19 @@ import "./assets/css/icofont.min.css";
 import "./assets/css/lightcase.css";
 import "./assets/css/odometer.css";
 import "./assets/css/style.min.css";
-import { Login } from "./views/auth/Login";
-import { Register } from "./views/auth/Register";
+import "./assets/css/swiper.min.css";
+
 import { Footer } from "./components/footer/Footer";
 import { getAssetsUrl } from "./utils/app.utils";
+import { AuthPage } from "./views/auth/AuthPage";
+import { Contact } from "./views/contact/Contact";
+import { About } from "./views/about/About";
+import { GameView } from "./views/game/Game";
+import { Jakpot } from "./views/jakpot/Jakpot";
+import { Partner } from "./views/partner/Partner";
+import { Pricing } from "./views/pricing/Pricing";
+import { Shop } from "./views/shop/Shop";
+import { ShopSingle } from "./views/shop/ShopSingle";
 
 function BodyShape() {
   return (
@@ -37,8 +43,16 @@ export function App(): JSXElement {
       <BodyShape />
       <Router>
         <Route path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
+        <Route path="/login" component={AuthPage} />
+        <Route path="/register" component={AuthPage} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+        <Route path="/games" component={GameView} />
+        <Route path="/jakpot" component={Jakpot} />
+        <Route path="/partner" component={Partner} />
+        <Route path="/pricing-plan" component={Pricing} />
+        <Route path="/shop" component={Shop} />
+        <Route path="/shop-single" component={ShopSingle} />
       </Router>
       <Footer />
     </main>

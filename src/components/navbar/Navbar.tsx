@@ -8,7 +8,7 @@ export function Navbar(): JSXElement {
   return (
     <nav class="header-section">
       <div class="container mx-auto">
-        <div class="header-holder d-flex flex-wrap justify-content-between align-items-center">
+        <div class="header-holder d-flex justify-between align-items-center">
           <NavbarLogo />
           <NavbarMenu />
         </div>

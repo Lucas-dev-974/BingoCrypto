@@ -1,9 +1,13 @@
 .notification-container{
-    @apply absolute right-5 w-fit flex flex-col gap-1;
+    @apply z-50 right-5 w-fit flex flex-col gap-1 fixed items-center ;
 }
 
 .notification-item{
     @apply flex justify-between items-center  px-3 py-2 w-fit gap-10  rounded-md text-white;
+}
+
+.notification-item > p {
+    @apply m-0
 }
 
 .notif-info{

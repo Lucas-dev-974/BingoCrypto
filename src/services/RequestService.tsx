@@ -47,18 +47,26 @@ class RequestService {
   private async manageError(response: Response) {
     const json = await response.json();
     if (response.status != 200) {
-      console.log("error manager:", json);
+      console.log("error manager:", json, json.message);
+      let notif: string;
 
+      if (typeof json == "string") {
+        pushNotif({
+          content: json,
+          type: "error",
+        });
+      }
       if (json.message) {
         throw json.message;
       }
       // * todo: review this part of code
-      let notificationContent = "";
-      Object.keys(json).forEach((obj, value) => {
-        json[obj].forEach((elem: string) => (notificationContent += elem));
-      });
+      // let notificationContent = "";
 
-      throw notificationContent;
+      // Object.keys(json).forEach((obj, value) => {
+      //   json[obj].forEach((elem: string) => (notificationContent += elem));
+      // });
+
+      throw json;
     }
 
     return json;

@@ -3,7 +3,7 @@ import { PageLayout } from "./PageLayout";
 import { CounterGains } from "./home/CounterGains";
 import { Banner } from "./home/Banner";
 import { Collection } from "./home/Collection";
-import { Jakpot } from "./home/Jakpot";
+import { JakpotHome } from "./home/JakpotHome";
 import { Collection2 } from "./home/Collection2";
 import { GameHomeSection } from "./home/Game";
 import { Faq } from "./home/Faq";
@@ -16,7 +16,7 @@ export function Home(): JSXElement {
       <Banner />
       <CounterGains />
       <Collection />
-      <Jakpot />
+      <JakpotHome />
       <Collection2 />
       <GameHomeSection />
       <Faq />
