@@ -4,7 +4,7 @@ export function JakpotHome() {
   return (
     <div
       class="jaqport padding-top padding-bottom"
-      style="background-image: url(assets/images/jaqport/jaqport-bg.jpg);"
+      style="background-image: url(src/assets/images/jaqport/jaqport-bg.jpg);"
     >
       <div class="container">
         <div class="section-header">
@@ -218,7 +218,7 @@ export function JakpotHome() {
                       </div>
                       <div class="jaqport__gamelist-middle">
                         <img
-                          src="assets/images/jaqport/country/11.jpg"
+                          src="src/assets/images/jaqport/country/11.jpg"
                           alt="jaqport-thumb"
                           class="rounded-circle"
                         />
@@ -233,7 +233,7 @@ export function JakpotHome() {
                       </div>
                       <div class="jaqport__gamelist-middle">
                         <img
-                          src="assets/images/jaqport/country/12.jpg"
+                          src="src/assets/images/jaqport/country/12.jpg"
                           alt="jaqport-thumb"
                           class="rounded-circle"
                         />

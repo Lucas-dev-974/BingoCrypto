@@ -4,7 +4,7 @@ export function Jakport() {
   return (
     <div
       class="jaqport padding-top padding-bottom"
-      style="background-image: url({getAssetsUrl() + assets/images/jaqport/jaqport-bg.jpg});"
+      style="background-image: url(src/assets/images/jaqport/jaqport-bg.jpg);"
     >
       <div class="container">
         <div class="section-header">
@@ -238,7 +238,7 @@ export function Jakport() {
                         <img
                           src={
                             getAssetsUrl() +
-                            "assets/images/jaqport/country/12.jpg"
+                            "src/assets/images/jaqport/country/12.jpg"
                           }
                           alt="jaqport-thumb"
                           class="rounded-circle"

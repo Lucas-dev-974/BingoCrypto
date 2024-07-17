@@ -4,7 +4,7 @@ export function GameSection2() {
   return (
     <div
       class="game game-style3 overflow-hidden"
-      style="background-image:url(assets/images/game/bg.jpg)"
+      style="background-image:url(src/assets/images/game/bg.jpg)"
     >
       <div class="container">
         <div class="section-wrapper">

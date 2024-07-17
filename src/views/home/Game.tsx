@@ -4,7 +4,7 @@ export function GameHomeSection() {
   return (
     <div
       class="game-section padding-top padding-bottom overflow-hidden"
-      style="background-image:url(assets/images/match/bg.jpg)"
+      style="background-image:url(src/assets/images/match/bg.jpg)"
     >
       <div class="container">
         <div class="section-header">

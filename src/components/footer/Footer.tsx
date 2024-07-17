@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer
       class="footer-section"
-      style="background-image: url(assets/images/footer/bg.jpg);"
+      style="background-image: url(src/assets/images/footer/bg.jpg);"
     >
       <div class="footer-top">
         <div class="container">

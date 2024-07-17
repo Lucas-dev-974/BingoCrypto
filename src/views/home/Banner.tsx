@@ -1,8 +1,14 @@
+import { getAssetsUrl } from "../../utils/app.utils";
+
 export function Banner() {
   return (
     <section
       class="banner"
-      style="background-image: url(http://localhost:3000/src/assets/images/banner/bg.jpg);"
+      style={
+        "background-image: url(" +
+        getAssetsUrl() +
+        "/src/assets/images/banner/bg.jpg);"
+      }
     >
       <div class="container">
         <div class="row g-0">

@@ -4,7 +4,7 @@ export function Testimonial() {
   return (
     <div
       class="testimonial padding-top padding-bottom"
-      style="background-image:url(assets/images/testimonial/bg.png)"
+      style="background-image:url(src/assets/images/testimonial/bg.png)"
     >
       <div class="container">
         <div class="section-header">
