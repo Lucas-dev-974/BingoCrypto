@@ -23,6 +23,7 @@ import { Partner } from "./views/partner/Partner";
 import { Pricing } from "./views/pricing/Pricing";
 import { Shop } from "./views/shop/Shop";
 import { ShopSingle } from "./views/shop/ShopSingle";
+import { KineGame } from "./games/kine/Kine";
 
 function BodyShape() {
   return (
@@ -53,6 +54,7 @@ export function App(): JSXElement {
         <Route path="/pricing-plan" component={Pricing} />
         <Route path="/shop" component={Shop} />
         <Route path="/shop-single" component={ShopSingle} />
+        <Route path="/kine" component={KineGame} />
       </Router>
       <Footer />
     </main>
