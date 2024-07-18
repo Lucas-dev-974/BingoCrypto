@@ -351,6 +351,7 @@ export function Register() {
       <div class="form-group">
         <label>Mot de passe :</label>
         <input
+          class="text-dark"
           type="password"
           name="City"
           onInput={(e) => setPassword(e.target.value)}
