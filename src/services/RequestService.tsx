@@ -1,4 +1,5 @@
 import { pushNotif } from "./Notification";
+import StoreService from "./StoreService";
 
 class RequestService {
   public host: string = "";
@@ -36,10 +37,11 @@ class RequestService {
   }
 
   private async request(url: string, options: RequestInit) {
+    const bearer = "Bearer " + StoreService.proxy.user?.token;
     return await this.manageError(
       await fetch(this.host + url, {
         ...options,
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Authorization: bearer },
       })
     );
   }
