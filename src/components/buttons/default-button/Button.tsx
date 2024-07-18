@@ -6,22 +6,15 @@ interface ButtonProps {
   text: string;
   onClick: () => void;
   class?: string;
-  dark?: boolean;
-  type?: "primary" | "borderless";
 }
 
 export function Button(props: ButtonProps): JSXElement {
-  const mergedProps = mergeProps({ type: "primary", class: "" }, props);
   return (
     <button
       onClick={props.onClick}
-      class={mergedProps.class + " button btn-" + mergedProps.type}
-      classList={{
-        "text-white": !props.dark,
-        "text-dark": props.dark,
-      }}
+      class={"default-button " + props.class ?? ""}
     >
-      {props.text}
+      <span>{props.text}</span>
     </button>
   );
 }
