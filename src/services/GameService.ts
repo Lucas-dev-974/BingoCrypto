@@ -1,11 +1,5 @@
 import RequestService from "./RequestService";
 
-const socket = new WebSocket("http://localhost:3001");
-
-// socket.addEventListener("open", (event) => {
-//   console.log(event);
-// });
-
 class GameService {
   public async generateRandomNumber() {
     return await RequestService.get("/game/random-number");
@@ -15,12 +9,13 @@ class GameService {
     return await RequestService.get("/game/generate-card");
   }
 
-  public async EnterRoom() {
-    return "ok";
+  public async getGames() {
+    return await RequestService.get('/game/games-list')
   }
 
-  public async showRoomState() {}
-  //   public async;
+  public async getRoomsForGame(game: string) {
+    return await RequestService.get("/game/rooms?gameName=KINE")
+  }
 }
 
 export default new GameService();

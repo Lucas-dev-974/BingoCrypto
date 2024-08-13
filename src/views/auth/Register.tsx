@@ -53,12 +53,12 @@ export function Register() {
   }
 
   async function register() {
-    if (!checkForm()) {
-      pushNotif({
-        content: "Veuillez remplir tous les champs du formulaire.",
-        type: "error",
-      });
-    }
+    // if (!checkForm()) {
+    //   pushNotif({
+    //     content: "Veuillez remplir tous les champs du formulaire.",
+    //     type: "error",
+    //   });
+    // }
 
     await AuthService.register(name(), email(), password());
   }
@@ -68,7 +68,7 @@ export function Register() {
       <div class="select-gender mb-3">
         <div class="form-check form-check-inline">
           <input
-            class="form-check-input"
+            class="form-check-input text-dark"
             type="radio"
             name="inlineRadioOptions"
             id="inlineRadio1"
@@ -81,7 +81,7 @@ export function Register() {
         </div>
         <div class="form-check form-check-inline">
           <input
-            class="form-check-input"
+            class="form-check-input text-dark"
             type="radio"
             name="inlineRadioOptions"
             id="inlineRadio2"
@@ -94,7 +94,7 @@ export function Register() {
         </div>
         <div class="form-check form-check-inline">
           <input
-            class="form-check-input"
+            class="form-check-input text-dark"
             type="radio"
             name="inlineRadioOptions"
             id="inlineRadio3"
@@ -314,6 +314,7 @@ export function Register() {
       </div>
     );
   }
+
   return (
     <div class="account-form text-start">
       <GenderSelection />
@@ -321,6 +322,7 @@ export function Register() {
       <div class="form-group">
         <label>Prénom : </label>
         <input
+          class="text-dark"
           type="text"
           placeholder="First Name"
           name="Fname"
@@ -330,6 +332,7 @@ export function Register() {
       <div class="form-group">
         <label>Nom : </label>
         <input
+          class="text-dark"
           type="text"
           name="surname"
           onInput={(e) => setLastName(e.target.value)}
@@ -342,6 +345,7 @@ export function Register() {
       <div class="form-group">
         <label>Adresse :</label>
         <input
+          class="text-dark"
           type="text"
           name="Address"
           onInput={(e) => setAddress(e.target.value)}

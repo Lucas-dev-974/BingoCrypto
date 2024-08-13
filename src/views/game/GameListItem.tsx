@@ -1,6 +1,6 @@
 export interface GameListItemProps {
   name: string;
-  bgMediaUrl: string;
+  background: string;
   link: string;
   price: string;
 }
@@ -12,7 +12,7 @@ export function GameListItem(props: GameListItemProps) {
         <div class="game__inner text-center p-0">
           <div class="game__thumb mb-0">
             <img
-              src={props.bgMediaUrl}
+              src={props.background}
               alt="game-img"
               class="rounded-3 w-100"
             />

@@ -1,8 +1,17 @@
+import { createSignal, onMount } from "solid-js";
 import { Button } from "../../components/buttons/default-button/Button";
 import GameService from "../../services/GameService";
 import { Pageheader } from "../../views/layout/PageHeader";
 
+
 export function KineGame() {
+  const [kineRooms, setKineRooms] = createSignal([])
+
+  onMount(async () => {
+    const rooms = await GameService.getRoomsForGame("KINE")
+    console.log("rooms kine:", rooms);
+
+  })
   async function generateRandomNumber() {
     const response = await GameService.generateRandomNumber();
     console.log("response:", response);
@@ -14,8 +23,8 @@ export function KineGame() {
   }
 
   async function enterInRoom() {
-    const response = await GameService.EnterRoom();
-    console.log("response:", response);
+    // const response = await GameService.EnterRoom();
+    // console.log("response:", response);
   }
 
   return (

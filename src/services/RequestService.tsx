@@ -37,6 +37,8 @@ class RequestService {
   }
 
   private async request(url: string, options: RequestInit) {
+    console.log("STORE user:", StoreService.proxy.user?.token);
+
     const bearer = "Bearer " + StoreService.proxy.user?.token;
     return await this.manageError(
       await fetch(this.host + url, {
