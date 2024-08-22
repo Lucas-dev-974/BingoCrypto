@@ -1,12 +1,17 @@
-import { Socket } from "socket.io";
 import { io } from "socket.io-client"
 
 export class SocketServices {
     private static instance: SocketServices;
     static socket = io("http://localhost:3001")
 
+
     // Méthode statique pour accéder à l'unique instance
     public static getInstance(): SocketServices {
+        this.socket.on("joinedGame", () => {
+            console.log("u joined a game");
+        })
+
+
         if (!SocketServices.instance) {
             SocketServices.instance = new SocketServices();
         }
@@ -18,8 +23,12 @@ export class SocketServices {
         this.socket.emit("message", msg)
     }
 
-    static joinRoom(roomId: number) {
-        this.socket.emit("join", roomId)
+    static search() {
+        this.socket.emit("search")
+    }
+
+    static printClient() {
+        this.socket.emit("printClients")
     }
 }
 
