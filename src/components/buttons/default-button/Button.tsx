@@ -10,10 +10,7 @@ interface ButtonProps {
 
 export function Button(props: ButtonProps): JSXElement {
   return (
-    <button
-      onClick={props.onClick}
-      class={"default-button " + props.class ?? ""}
-    >
+    <button onClick={props.onClick} class={"default-button " + props.class}>
       <span>{props.text}</span>
     </button>
   );
