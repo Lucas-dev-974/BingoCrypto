@@ -4,15 +4,13 @@ import GameService from "../../services/GameService";
 import { Pageheader } from "../../views/layout/PageHeader";
 import { SocketServices } from "../../services/SocketService";
 
-
 export function KineGame() {
-  const [kineRooms, setKineRooms] = createSignal([])
+  const [kineRooms, setKineRooms] = createSignal([]);
 
   onMount(async () => {
-    const rooms = await GameService.getRoomsForGame("KINE")
+    const rooms = await GameService.getAvailableKineRoom();
     console.log("rooms kine:", rooms);
-
-  })
+  });
   async function generateRandomNumber() {
     const response = await GameService.generateRandomNumber();
     console.log("response:", response);
@@ -24,8 +22,8 @@ export function KineGame() {
   }
 
   async function searchRoom() {
-    SocketServices.sendMessage("teste from client")
-    SocketServices.search()
+    SocketServices.sendMessage("teste from client");
+    SocketServices.search();
     // const response = await GameService.EnterRoom();
     // console.log("response:", response);
   }
