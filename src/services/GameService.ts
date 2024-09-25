@@ -1,4 +1,8 @@
 import RequestService from "./RequestService";
+import { io } from "socket.io-client";
+
+const socket = io("ws://localhost:3002");
+socket.connect();
 
 class GameService {
   public async generateRandomNumber() {
@@ -9,12 +13,15 @@ class GameService {
     return await RequestService.get("/game/generate-card");
   }
 
-  public async getGames() {
-    return await RequestService.get('/game/games-list')
+  public async EnterRoom() {
+    socket.emit("message", {
+      message: "teste",
+      nick: "oui",
+    });
   }
 
-  public async getRoomsForGame(game: string) {
-    return await RequestService.get("/game/rooms?gameName=KINE")
+  public async getAvailableKineRoom() {
+    return await RequestService.get("/game/kine-room");
   }
 }
 
